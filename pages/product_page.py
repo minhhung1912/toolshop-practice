@@ -16,6 +16,4 @@ class ProductPage(BasePage):
         return self
 
     def price(self) -> float:
-        from pages.cart_page import money
-
-        return money(self.unit_price.inner_text())
+        return float(self.unit_price.inner_text())
